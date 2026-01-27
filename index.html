@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PineApple | Club Privado</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+    <div id="audio-player-container" class="audio-widget">
+        <button id="play-pause-btn" class="play-btn">
+            <span id="audio-icon">▶ SOUND ON</span>
+        </button>
+        <audio id="bg-audio" loop preload="auto">
+            <source src="assets/Media/Music/intro-techno.mp3" type="audio/mpeg">
+            Tu navegador no soporta el elemento de audio.
+        </audio>
+    </div>
+
+    <div class="container">
+        <header style="display: flex; justify-content: space-between; align-items: flex-start;">
+            <div>
+                <h1 style="letter-spacing: 8px; text-transform: uppercase; color: var(--accent-color);">PineApple</h1>
+                <p style="color: var(--text-dim);">Comunidad Electrónica Liberal</p>
+            </div>
+            
+            <a href="https://www.instagram.com/pineapplearg/" target="_blank" class="instagram-link" title="Seguinos en Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+                <span>pineapplearg</span>
+            </a>
+        </header>
+
+        <main>
+            <section class="event-card">
+                <span class="badge">Próximamente</span>
+                <div class="event-details">
+                    <div>
+                        <h2 style="font-size: 2.5rem; text-transform: uppercase;">Pink Panther</h2>
+                        <p style="color: var(--text-dim);">Sábado 14 de Marzo | 23:59hs</p>
+                        <p style="margin-top: 1rem;">Line up: <span style="color: var(--accent-color);">Residentes + invitados sorpresa</span></p>
+                    </div>
+
+                   <div id="login-container">
+                <div id="g_id_onload"
+                    data-client_id="1072810203712-rn60r97cccebm6i3ev7kvds5v41mdl5p.apps.googleusercontent.com"
+                    data-context="signin"
+                    data-ux_mode="popup"
+                    data-callback="handleCredentialResponse"
+                    data-auto_prompt="false">
+                </div>
+
+                <div class="g_id_signin"
+                    data-type="standard"
+                    data-shape="rectangular"
+                    data-theme="dark"
+                    data-text="signin_with"
+                    data-size="large"
+                    data-logo_alignment="left">
+                </div>
+        </div>
+                </div>
+            </section>
+
+            <section id="archive" style="margin-top: 5rem;">
+                <h3 style="letter-spacing: 4px; text-transform: uppercase; font-size: 0.9rem; border-bottom: 1px solid #222; padding-bottom: 1rem;">
+                    The Archive / Experiencias pasadas
+                </h3>
+                
+                <div class="archive-grid">
+                    <div class="archive-item"><img src="assets/Media/Images/evento1.jpg" alt="Vibe 1"></div>
+                    <div class="archive-item"><img src="assets/Media/Images/evento2.jpg" alt="Vibe 2"></div>
+                    <div class="archive-item"><img src="assets/Media/Images/evento3.jpg" alt="Vibe 3"></div>
+            
+                    <div class="archive-item">
+                        <video autoplay muted loop playsinline class="archive-video">
+                            <source src="assets/Media/Videos/evento4.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
