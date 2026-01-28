@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PineApple | Club Privado</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <link rel="stylesheet" href="style.css">
-    <script src="https://accounts.google.com/gsi/client" async defer></script>
-</head>
+    </head>
 <body>
     <div id="audio-player-container" class="audio-widget">
         <button id="play-pause-btn" class="play-btn">
@@ -20,9 +20,13 @@
 
     <div class="container">
         <header style="display: flex; justify-content: space-between; align-items: flex-start;">
-            <div>
-                <h1 style="letter-spacing: 8px; text-transform: uppercase; color: var(--accent-color);">PineApple</h1>
-                <p style="color: var(--text-dim);">Comunidad Electrónica Liberal</p>
+            <div style="display: flex; align-items: center; gap: 20px;">
+                <img src="assets/favicon.ico" alt="Logo" style="width: 50px; height: 50px; filter: drop-shadow(0 0 8px var(--accent-color));">
+                
+                <div style="display: flex; flex-direction: column;">
+                    <h1 style="margin: 0; letter-spacing: 8px; text-transform: uppercase; color: var(--accent-color); line-height: 1;">PineApple</h1>
+                    <p style="margin: 5px 0 0 0; color: var(--text-dim); font-size: 0.9rem;">Comunidad Electrónica Liberal</p>
+                </div>
             </div>
             
             <a href="https://www.instagram.com/pineapplearg/" target="_blank" class="instagram-link" title="Seguinos en Instagram">
@@ -39,30 +43,37 @@
             <section class="event-card">
                 <span class="badge">Próximamente</span>
                 <div class="event-details">
-                    <div>
-                        <h2 style="font-size: 2.5rem; text-transform: uppercase;">Pink Panther</h2>
-                        <p style="color: var(--text-dim);">Sábado 14 de Marzo | 23:59hs</p>
-                        <p style="margin-top: 1rem;">Line up: <span style="color: var(--accent-color);">Residentes + invitados sorpresa</span></p>
+                    <div style="display: flex; flex-direction: column; gap: 15px;">
+                        <div class="event-flyer" style="width: 100%; max-width: 400px; border-radius: 10px; overflow: hidden; border: 1px solid var(--accent-color); box-shadow: 0 0 15px rgba(0, 243, 255, 0.3);">
+                            <img src="assets/Media/Flyers/flyer-pink-panther.png" alt="Flyer Pink Panther" style="width: 100%; display: block;">
+                        </div>
+
+                        <div>
+                            <h2 style="font-size: 2.5rem; text-transform: uppercase; margin-top: 10px;">Pink Panther</h2>
+                            <p style="color: var(--text-dim);">Sábado 14 de Marzo | 23:59hs</p>
+                            <p style="margin-top: 1rem;">Line up: <span style="color: var(--accent-color);">Residentes + invitados sorpresa</span></p>
+                        </div>
                     </div>
 
-                   <div id="login-container">
-                <div id="g_id_onload"
-                    data-client_id="1072810203712-rn60r97cccebm6i3ev7kvds5v41mdl5p.apps.googleusercontent.com"
-                    data-context="signin"
-                    data-ux_mode="popup"
-                    data-callback="handleCredentialResponse"
-                    data-auto_prompt="false">
-                </div>
-
-                <div class="g_id_signin"
-                    data-type="standard"
-                    data-shape="rectangular"
-                    data-theme="dark"
-                    data-text="signin_with"
-                    data-size="large"
-                    data-logo_alignment="left">
-                </div>
-        </div>
+                    <div style="margin-top: 30px; display: flex; justify-content: flex-end; width: 100%; max-width: 400px;">
+                        <button onclick="accessClub()" style="
+                            background: transparent;
+                            color: var(--accent-color);
+                            border: 2px solid var(--accent-color);
+                            padding: 12px 30px;
+                            font-family: inherit;
+                            font-weight: bold;
+                            text-transform: uppercase;
+                            letter-spacing: 3px;
+                            cursor: pointer;
+                            border-radius: 5px;
+                            transition: all 0.3s ease;
+                            box-shadow: 0 0 10px rgba(0, 243, 255, 0.2);
+                        " onmouseover="this.style.background='var(--accent-color)'; this.style.color='black'; this.style.boxShadow='0 0 25px var(--accent-color)';" 
+                           onmouseout="this.style.background='transparent'; this.style.color='var(--accent-color)'; this.style.boxShadow='0 0 10px rgba(0, 243, 255, 0.2)';">
+                            ENTRAR AL CLUB
+                        </button>
+                    </div>
                 </div>
             </section>
 
@@ -84,6 +95,26 @@
                 </div>
             </section>
         </main>
+    </div>
+
+    <div class="dj-booth" style="
+        margin: 20px auto; 
+        max-width: 800px; 
+        padding: 15px; 
+        background: rgba(255, 255, 255, 0.05); 
+        border: 1px solid var(--accent-color); 
+        border-radius: 15px; 
+        box-shadow: 0 0 15px rgba(0, 243, 255, 0.2);
+        backdrop-filter: blur(10px);">
+        
+        <h3 style="color: var(--accent-color); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px;">
+            🎧 DJ Set Helios Wave AKA Vans - Navidad 2014 RPC night - Niceto Club @ KAOS
+            Genero: Psytrance / Full on
+        </h3>
+
+        <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" 
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/183122729&color=%2300f3ff&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+        </iframe>
     </div>
 
     <script src="script.js"></script>
