@@ -4,9 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PineApple | Dashboard VIP</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <link rel="stylesheet" href="style.css">
 </head>
 <body style="display: flex; align-items: center; justify-content: center; min-height: 100vh;">
+    
+    <div id="audio-player-container" class="audio-widget">
+        <button id="play-pause-btn" class="play-btn">
+            <span id="audio-icon">▶ SOUND ON</span>
+        </button>
+        <audio id="bg-audio" loop preload="auto">
+            <source src="assets/Media/Music/intro-techno.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
     <div class="container" style="text-align: center;">
         <header>
             <h1 style="color: var(--accent-color); letter-spacing: 5px;">BIENVENIDO AL CLUB</h1>
@@ -33,9 +44,14 @@
 
     <script src="script.js"></script>
     <script>
-        // Mantenemos la función de logout aquí por comodidad
         function logout() {
-            localStorage.removeItem('user_name'); // Limpiamos al salir
+            // Guardamos el estado del audio antes de salir para que siga sonando en el index
+            const audio = document.getElementById('bg-audio');
+            if(audio) {
+                localStorage.setItem('audioTime', audio.currentTime);
+                localStorage.setItem('audioPlaying', !audio.paused);
+            }
+            localStorage.removeItem('user_name');
             window.location.href = 'index.html';
         }
     </script>
